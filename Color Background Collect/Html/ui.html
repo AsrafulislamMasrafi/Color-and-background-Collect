@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Collector</title>
+    <link rel="stylesheet" href="../Css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <p>Display Color</p>
+        <button id="clickbtn">Random Color</button>
+      </nav>
+      <hr />
+      <!-- Color Show Ped -->
+      <div class="colorPed" id="colorPed"></div>
+
+      <hr />
+
+      <!-- Color Customize Div Start -->
+      <div class="colorFun">
+        <!-- Copy Button  -->
+        <div class="copyBoard">
+          <p>Change & Copy Color</p>
+          <div class="btn">
+            <button class="saveButton" id="save">Save</button>
+            <button class="copyButton" id="copy">Copy</button>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- color Input -->
+
+        <div class="colorSelect">
+          <!-- Select RGB or HEX -->
+          <div class="select">
+            <p>Select Copy Mode</p>
+            <div class="selectRadioDiv">
+              <div class="Selectcolors">
+                <input
+                  type="radio"
+                  value="hex"
+                  name="colorType"
+                  id="hex"
+                  checked
+                />
+                <label for="hex">Hex</label>
+              </div>
+
+              <div class="Selectcolors">
+                <input type="radio" value="rgb" name="colorType" id="rgb" />
+                <label for="rgb">rgb</label>
+              </div>
+            </div>
+          </div>
+          <!-- input Color  -->
+          <div class="inputDiv">
+            <div class="Inp hexinp">
+              <label class=""> Hex </label>
+              <input type="text" value="DFDEEF" id="HexInput" />
+            </div>
+
+            <div class="Inp">
+              <label class=""> RGB </label>
+              <input
+                value="rgb(223, 222, 239)"
+                type="text"
+                id="rgbInput"
+                disabled
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- rgb Color Adjust -->
+        <div class="colorAdjust">
+          <div class="colorRange">
+            <div class="range">
+              <span>Red</span>
+              <label id="redLabel">223</label>
+            </div>
+            <input type="range" min="0" max="255" value="223" id="red" />
+          </div>
+
+          <div class="colorRange">
+            <div class="range">
+              <span>green</span>
+              <label id="greenLabel">222</label>
+            </div>
+            <input type="range" min="0" max="255" value="222" id="green" />
+          </div>
+
+          <div class="colorRange">
+            <div class="range">
+              <span>blue</span>
+              <label id="blueLabel">239</label>
+            </div>
+            <input type="range" min="0" max="255" value="239" id="blue" />
+          </div>
+        </div>
+      </div>
+      <!-- Preset colors-->
+      <div class="presetMainDiv">
+        <div class="presetDivHead">
+          <p>Preset Colors</p>
+          <hr />
+          <div class="presetColorDiv" id="presetColorDiv"></div>
+        </div>
+      </div>
+      <!--Save color  -->
+      <div class="saveMainDiv">
+        <div class="saveDivHead">
+          <p>save Colors</p>
+          <hr />
+          <div class="presetColorDiv" id="saveColorDiv"></div>
+        </div>
+      </div>
+      <!-- Image background set -->
+      <div class="imgBackground">
+        <div class="imgDivHeader">
+          <p>Background Preference</p>
+          <hr />
+          <p>Background Preview</p>
+        </div>
+        <div class="imgBackgroundChangeDiv">
+          <div id="imgField" class="imgField"></div>
+          <div id="imgInput" class="imgInput">
+            <input
+              type="file"
+              id="fileChoose"
+              name="fileChoose"
+              accept="image/png, image/jpeg,image/jpg"
+            />
+            <div class="selectBackgroundStyle" id="selectBackgroundStyle">
+              <div class="selectDiv" id="selectDiv">
+                <label for="backgroundSize">Background Size</label>
+                <select name="backgroundSize" id="backgroundSize">
+                  <option value="auto">auto</option>
+                  <option value="inherit">inherit</option>
+                  <option value="auto">initial</option>
+                  <option value="auto">contain</option>
+                  <option value="auto">cover</option>
+                </select>
+              </div>
+
+              <div class="selectDiv" id="selectDiv">
+                <label for="backgroundRepeat">Background Repeat</label>
+                <select name="backgroundRepeat" id="backgroundRepeat">
+                  <option value="repeat">repeat</option>
+                  <option value="no-repeat">no-repeat</option>
+                  <option value="repeat-x">repeat-x</option>
+                  <option value="repeat-y">repeat-y</option>
+                </select>
+              </div>
+
+              <div class="selectDiv" id="selectDiv">
+                <label for="backgroundPosition">Background Repeat</label>
+                <select name="backgroundPosition" id="backgroundPosition">
+                  <option value="center">center</option>
+                  <option value="left">left</option>
+                  <option value="right">right</option>
+                  <option value="right">right</option>
+                  <option value="right">bottom</option>
+                </select>
+              </div>
+            </div>
+            <label for="fileChoose" class="inputImgLabel">
+              Upload Your Background Image
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../Js/uiapp.js"></script>
+  </body>
+</html>
