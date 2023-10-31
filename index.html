@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>colors</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bar">
+        <h5>Display color</h5>
+        <button class="ChangeBtn">Random Color</button>
+      </div>
+      <hr />
+      <div class="box"></div>
+      <hr />
+      <div class="bar">
+        <h5>Change & Copy Color</h5>
+        <div>
+          <button class="saveBtn">Save</button>
+          <button class="copyBtn">Copy</button>
+        </div>
+      </div>
+      <hr />
+      <div class="bar">
+        <h5>Select Copy Mode</h5>
+        <div class="radioBox">
+          <div class="radiobtnbox">
+            <input
+              type="radio"
+              name="radio"
+              id="hexRadio"
+              checked
+              value="hex"
+            /><label for="hexRadio">Hex</label>
+          </div>
+          <div class="radiobtnbox">
+            <input type="radio" name="radio" id="rgbRadio" value="rgb" /><label
+              for="rgbRadio"
+              >Rgb</label
+            >
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!-- color text input -->
+      <div class="inputContainer">
+        <div class="colorInputBox">
+          <span>HEX</span>
+          <div class="inputBox">
+            <input type="text" value="#DFDEEF" class="hexColor" />
+          </div>
+        </div>
+        <div class="colorInputBox">
+          <span>RGB</span>
+          <div class="inputBox">
+            <!-- <span>rgb</span> -->
+            <input type="text" value="rgb(223, 222, 239)" class="rgbColor" />
+          </div>
+        </div>
+      </div>
+      <!-- range input -->
+      <div class="inputContainer">
+        <div class="rangeBox">
+          <div class="bar rangeTextRed"><span>Red</span> <span>223</span></div>
+          <input type="range" max="255" name="Red" class="red" value="223" />
+        </div>
+        <div class="rangeBox">
+          <div class="bar rangeTextGreen">
+            <span>Green</span> <span>222</span>
+          </div>
+          <input
+            type="range"
+            max="255"
+            name="green"
+            class="green"
+            value="222"
+          />
+        </div>
+        <div class="rangeBox">
+          <div class="bar rangeTextBlue">
+            <span>Blue</span> <span>239</span>
+          </div>
+          <input type="range" max="255" name="blue" class="blue" value="239" />
+        </div>
+      </div>
+      <div class="bar">
+        <h5>Preset Colors</h5>
+      </div>
+      <hr />
+      <div class="presetContainer presetBox"></div>
+      <div class="bar">
+        <h5>save Colors</h5>
+      </div>
+      <hr />
+      <div class="presetContainer saveBox"></div>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>
