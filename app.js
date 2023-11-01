@@ -13,6 +13,14 @@ const rangeTextGreen = document.querySelector(".rangeTextGreen");
 const rangeTextBlue = document.querySelector(".rangeTextBlue");
 const presetColorContainer = document.querySelector(".presetBox");
 const saveContainer = document.querySelector(".saveBox");
+const clearSave = document.querySelector(".clearSave");
+const imageInput = document.querySelector(".imageInput");
+const imageContainer = document.querySelector(".image");
+const bgSize = document.querySelector("#bgSize");
+const bgRepeat = document.querySelector("#bgRepeat");
+const bgPosition = document.querySelector("#bgPosition");
+const ClearImage = document.querySelector(".ClearImage");
+
 let toastDiv = null;
 let presetArray = [
   "#E18816",
@@ -47,6 +55,12 @@ function main() {
   presetColorContainer.addEventListener("click", CopyColorContainer);
   saveContainer.addEventListener("click", CopyColorContainer);
   saveBtn.addEventListener("click", colorSaveBtnHandler);
+  clearSave.addEventListener("click", clearSaveColor);
+  bgPosition.addEventListener("change", styleChangeHandler);
+  imageInput.addEventListener("change", imageInputHandle);
+  bgSize.addEventListener("change", styleChangeHandler);
+  bgRepeat.addEventListener("change", styleChangeHandler);
+  ClearImage.addEventListener("click", clearImageHandler);
 }
 
 // this function handle click event for color change button
@@ -112,6 +126,37 @@ function colorSaveBtnHandler() {
   removeChild(saveContainer);
   displayPreset(saveContainer, saveColorArray);
 }
+/**
+ * this function clear color for local storage and remove dom and clear saveColorArray
+ */
+function clearSaveColor() {
+  localStorage.clear("data-color");
+  saveColorArray = [];
+  removeChild(saveContainer);
+}
+// handle file input and set background
+function imageInputHandle(e) {
+  let file = e.target.files[0];
+  let background = URL.createObjectURL(file);
+  imageContainer.style.background = `url(${background})`;
+  styleChangeHandler();
+  document.querySelector(".backgroundInput").style.display = "block";
+  ClearImage.style.display = "block";
+}
+
+function clearImageHandler() {
+  document.querySelector(".backgroundInput").style.display = "none";
+  ClearImage.style.display = "none";
+  imageContainer.style.background = `#DFDEEF`;
+  imageInput.value = null;
+}
+// update image container css
+function styleChangeHandler() {
+  imageContainer.style.backgroundPosition = bgPosition.value;
+  imageContainer.style.backgroundSize = bgSize.value;
+  imageContainer.style.backgroundRepeat = bgRepeat.value;
+}
+
 /**
  * this function update all dom html test
  * @param {object} color

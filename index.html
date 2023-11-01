@@ -92,9 +92,49 @@
       <div class="presetContainer presetBox"></div>
       <div class="bar">
         <h5>save Colors</h5>
+        <button class="clearSave">Clear</button>
       </div>
       <hr />
       <div class="presetContainer saveBox"></div>
+      <div class="bar">
+        <h5>Background Preview</h5>
+      </div>
+      <hr />
+      <div class="box image"></div>
+      <div class="bar">
+        <input type="file" class="imageInput" accept="image/*" id="image" />
+        <label for="image" class="imagebutton">Choose Your image</label>
+        <button class="ClearImage">Remove Image</button>
+      </div>
+      <div class="backgroundInput">
+        <label for="bgSize">background-size</label>
+        <select name="bgSize" id="bgSize">
+          <option value="cover" selected>cover</option>
+          <option value="auto">auto</option>
+          <option value="contain">contain</option>
+          <option value="initial">initial</option>
+          <option value="inherit">inherit</option>
+        </select>
+        <label for="bgRepeat">background-repeat</label>
+        <select name="bgRepeat" id="bgRepeat">
+          <option selected value="no-repeat">no-repeat</option>
+          <option value="repeat">repeat</option>
+          <option value="repeat-x">repeat-x</option>
+          <option value="repeat-y">repeat-y</option>
+          <option value="space">space</option>
+          <option value="round">round</option>
+        </select>
+        <label for="bgPosition">background-position</label>
+        <select name="bgPosition" id="bgPosition">
+          <option value="center" selected>center</option>
+          <option value="top">top</option>
+          <option value="right">right</option>
+          <option value="left">left</option>
+          <option value="bottom">bottom</option>
+          <option value="inherit">inherit</option>
+          <option value="initial">initial</option>
+        </select>
+      </div>
     </div>
   </body>
   <script src="./app.js"></script>

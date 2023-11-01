@@ -83,7 +83,7 @@ body {
 button {
   background: none;
   color: #ff6347;
-  font-size: 14px;
+  font-size: 16px;
 }
 .box {
   width: 100%;
@@ -98,7 +98,7 @@ button {
   justify-content: space-between;
 }
 hr {
-  margin: 15px 0;
+  margin: 14px 0;
 }
 /* save and copy btn */
 .saveBtn {
@@ -185,4 +185,29 @@ label {
   100% {
     transform: translateX(300px);
   }
+}
+.image {
+  height: 300px;
+  
+}
+.backgroundInput {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 10px;
+  display: none;
+}
+.backgroundInput label,
+select {
+  width: 100%;
+}
+#image {
+  display: none;
+}
+.imagebutton {
+  padding: 10px;
+  color: #ff6347;
+}
+.ClearImage{
+  display: none;
 }
