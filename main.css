@@ -62,7 +62,7 @@ body {
   background: #ffffff;
   border-radius: 5px;
   width: 45vw;
-  box-shadow: 1px 1px 3px #a8a8a8;
+  box-shadow: 1px 1px 3px #ede6e6;
   padding: 30px;
   margin-top: 50px;
 }
@@ -188,7 +188,6 @@ label {
 }
 .image {
   height: 300px;
-  
 }
 .backgroundInput {
   display: flex;
@@ -208,6 +207,6 @@ select {
   padding: 10px;
   color: #ff6347;
 }
-.ClearImage{
+.ClearImage {
   display: none;
 }
