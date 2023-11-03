@@ -1,3 +1,5 @@
 # Color And Background Collect
 
-![alt](</Color%20Background%20Collect/Img/color%20app%20(2).png>)
+![Preview Image](https://raw.githubusercontent.com/AsrafulislamMasrafi/Color-and-background-Collect0.1/main/Screenshot%20(3).png)
+[Live View](https://asrafulislammasrafi.github.io/Color-and-background-Collect0.1/)
+
